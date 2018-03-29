@@ -1,0 +1,22 @@
+.addAppointment{
+    padding: 20px;
+    height: 400px;
+}
+
+.searchAppointment{
+    padding: 20px;
+}
+
+.main-form{
+    margin-top: 20px;
+}
+
+#btn-submit{
+    width: 100px;
+    float: left;
+}
+
+#btn-clear{
+    width: 100px;
+    float: right
+}

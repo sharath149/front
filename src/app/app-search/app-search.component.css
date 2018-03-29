@@ -1,0 +1,17 @@
+#search-text{
+    width: 70%;
+    float: left;
+}
+
+#btn-search{
+    width: 120px;
+    margin-left: 10px;
+}
+
+#content-table{
+    margin-top: 30px;
+}
+
+.table-head{
+    margin-top: 20px;
+}

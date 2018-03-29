@@ -1,0 +1,22 @@
+<form>
+  <input type="text" class="form-control" id="search-text" name="searchText" [(ngModel)]="searchText">
+  <button type="submit" class="btn btn-primary" id="btn-search">Search</button>
+</form>
+
+<h5 class="table-head">List of Appointments</h5>
+<table class="table table-striped" id="content-table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointments of appointment | filter:searchText ">
+        <td>{{appointments.date}}</td>
+        <td>{{appointments.time}}</td>
+        <td>{{appointments.description}}</td>
+      </tr>
+    </tbody>
+  </table>

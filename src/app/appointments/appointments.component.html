@@ -1,0 +1,38 @@
+<div class="row">
+
+
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="searchAppointment">
+        <app-app-search></app-app-search>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="addAppointment">
+        <button class="btn btn-primary" (click)="changeShowStatus()">New Appointment</button>
+        <form class="main-form" #saveForm="ngForm" (ngSubmit)="createAppointment(saveForm)" *ngIf="showHide">
+          <div class="form-group">
+            <label for="Date">Pick a Date</label>
+            <input type="date" class="form-control" name="AppointmentDate" #AppointmentDate="ngModel" [(ngModel)]="newAppointment.date">
+          </div>
+          <div class="form-group">
+            <label for="Time">Pick Timings</label>
+            <input type="time" id="time" class="form-control" name="AppointmentTime" #AppointmentTime="ngModel" [(ngModel)]="newAppointment.time">
+          </div>
+          <div class="form-group">
+            <label for="Description">Description</label>
+            <input type="text" class="form-control" name="AppointmentDescription" #AppointmentDescription="ngModel" [(ngModel)]="newAppointment.description">
+          </div>
+          <button type="submit" class="btn btn-primary" id="btn-submit" value="save">Submit</button>
+          <button type="reset" class="btn btn-primary" id="btn-clear" >Clear</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</div>
